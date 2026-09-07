@@ -36,6 +36,7 @@ function publication(paper) {
     <div class="publication-meta">${paper.accepted ? '<span class="venue accepted" data-content-title="ui.acceptedNote" title="Acceptance reported in the arXiv Comments field">ECCV 2026</span>' : tx('ui.preprint', 'span', 'class="venue"')}${tx(base + 'date', 'time', `datetime="${year}-${months[month]}"`)}</div>
     <h3 id="paper-${paper.key}"><a href="${abs}">${tx(base + 'title')}</a></h3>
     <p class="authors">${paper.authors.map(author => author === 'Haifa Zhang' ? '<strong>' + escape(author) + '</strong>' : escape(author)).join(', ')}</p>
+    <ul class="paper-keywords" aria-label="Research keywords">${paper.keywords.map(keyword => `<li>${escape(keyword)}</li>`).join('')}</ul>
     <div class="paper-links"><a href="${abs}" aria-label="arXiv: ${escape(paper.title)}">arXiv ↗</a><a href="https://arxiv.org/pdf/${paper.id}" aria-label="PDF: ${escape(paper.title)}">PDF ↗</a><details class="citation">${tx('ui.citation', 'summary')}<pre><code>${escape(bibtex(paper))}</code></pre></details></div>
     ${tx(base + 'takeaway', 'p', 'class="paper-takeaway"')}
     <div class="paper-visual">

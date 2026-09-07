@@ -61,6 +61,8 @@ time { color: var(--faint); }
 .publication h3 a:hover { color: var(--blue); }
 .authors { font-size: .875rem; color: var(--muted); line-height: 1.8; margin-top: .45rem; }
 .authors strong { font-weight: 650; color: var(--ink); }
+.paper-keywords { display: flex; flex-wrap: wrap; gap: .4rem .5rem; margin: .7rem 0 .3rem; padding: 0; list-style: none; }
+.paper-keywords li { max-width: 100%; padding: .12rem .5rem; border: 1px solid var(--line); border-radius: 3px; background: #f6f8fb; color: #455367; font-size: .875rem; line-height: 1.6; }
 .paper-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: .1rem 1.2rem; margin-top: .45rem; font-size: .875rem; font-weight: 600; }
 .paper-links > a, .citation summary { padding: .25rem 0; }
 .citation { min-width: 0; font-weight: 400; }
