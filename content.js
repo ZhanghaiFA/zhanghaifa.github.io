@@ -14,7 +14,7 @@ window.HOMEPAGE_CONTENT = {
     "explore": "Explore my work",
     "researchTitle": "Research interests",
     "papersTitle": "Selected publications",
-    "papersCount": "3 papers",
+    "papersCount": "3 first-author papers",
     "contactTitle": "Contact",
     "backTop": "Back to top",
     "research1": "Robust multimodal fusion",
@@ -34,6 +34,7 @@ window.HOMEPAGE_CONTENT = {
     "close": "Close",
     "figureDialog": "Paper figure",
     "citation": "BibTeX",
+    "paperDetails": "Method & experimental details",
     "imageNote": "Original paper figure; click to enlarge."
   },
   "papers": [
@@ -63,6 +64,8 @@ window.HOMEPAGE_CONTENT = {
       "method": "A Feature Router (FR) or Semantic Router (SR), chosen for the network architecture, adjusts contributions before the first feature mixing operation. The two are alternative implementations trained with detection supervision.",
       "result": "On M4-SAR, adding FR to Simple U-Net raises full-input mAP50 from 58.2% to 64.1% (+5.9 percentage points). Both models use clean training and are evaluated with both modalities present.",
       "metric": "58.2 → 64.1",
+      "resultHighlight": "+5.9 percentage points",
+      "resultCondition": "Clean training; both modalities present at evaluation.",
       "metricLabel": "mAP50 (%) · M4-SAR · Simple U-Net",
       "caption": "Figure 2. FR acts near the input in frequently fused networks; SR acts before late fusion in dual-backbone networks.",
       "alt": "Original Figure 2: Feature Router for frequently fused networks above, Semantic Router before late fusion below."
@@ -92,6 +95,8 @@ window.HOMEPAGE_CONTENT = {
       "method": "DeGuNet combines depth-completion pretraining, mask-aware feature extraction, and progressive cross-modal guidance to learn compact image features aligned with 3D geometry.",
       "result": "For BEVFusion’23, the A100 efficiency test (batch size 1, 256 × 704 images) reports GPU memory dropping from 20.46 to 6.86 GB (−66.5%) and speed rising from 4.4 to 5.1 FPS. Methods use their recommended inference configurations.",
       "metric": "20.46 → 6.86 GB",
+      "resultHighlight": "66.5% less GPU memory",
+      "resultCondition": "A100, batch 1, 256 × 704 images. Recommended inference configuration for each method.",
       "metricLabel": "GPU memory · BEVFusion’23 · A100 / batch 1",
       "caption": "Figure 1. RGB images and sparse LiDAR projections guide successive feature stages before BEV transformation and fusion.",
       "alt": "Original Figure 1: RGB and projected LiDAR depth guide three image backbone stages, followed by LiteNeck, LSS, fusion and 3D detection."
@@ -122,6 +127,8 @@ window.HOMEPAGE_CONTENT = {
       "method": "Grace-BEV uses TrustGate to estimate LiDAR reliability and route between LiDAR-guided and vision-only BEV features. FailSafe Fusion and three-phase training with modality dropout help preserve the fallback.",
       "result": "On nuScenes-R with complete LiDAR dropout, BEVFusion-AD with Grace-BEV reaches 34.7% mAP versus 0.0% for its baseline. On clean data, the same configuration improves mAP from 68.1% to 69.2%.",
       "metric": "0.0 → 34.7",
+      "resultHighlight": "A visual fallback under LiDAR failure",
+      "resultCondition": "nuScenes-R with complete LiDAR dropout; cameras remain available.",
       "metricLabel": "mAP (%) · BEVFusion-AD · complete LiDAR dropout",
       "caption": "Figure 2. TrustGate routes between depth-guided and vision-only branches; FailSafe Fusion combines their features for detection.",
       "alt": "Original Figure 2: TrustGate controls LiDAR-guided and pure-vision branches, followed by FailSafe Fusion and a detection head."
