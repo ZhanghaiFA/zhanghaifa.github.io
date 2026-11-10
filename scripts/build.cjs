@@ -54,7 +54,7 @@ function publication(paper) {
     <div class="paper-links"><a href="${abs}" aria-label="arXiv: ${escape(paper.title)}">arXiv</a><a href="https://arxiv.org/pdf/${paper.id}" aria-label="PDF: ${escape(paper.title)}">PDF</a><details class="citation">${tx('ui.citation', 'summary')}<pre><code>${escape(bibtex(paper))}</code></pre></details><details class="paper-details"><summary>${tx('ui.paperDetails')}</summary><dl class="paper-explanation"><div>${tx('ui.problem', 'dt')}${tx(base + 'problem', 'dd')}</div><div>${tx('ui.method', 'dt')}${tx(base + 'method', 'dd')}</div><div>${tx('ui.result', 'dt')}<dd>${tx(base + 'result')} <a href="${paper.resultSource}" target="_blank" rel="noopener noreferrer">${tx('ui.evidence')}</a></dd></div></dl></details></div>
   </article>`;
 }
-// Papers are grouped under their year, in the order they appear in content.js (newest first).
+// Papers are grouped under their year, in the order they appear in content.js.
 const years = [...new Set(content.papers.map(paper => paper.date.split(' ')[1]))];
 const updated = new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 // Every "researchN" key in content.js becomes one row of the research interests list.

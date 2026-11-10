@@ -7,7 +7,7 @@
   <title>Haifa Zhang · Tianjin University</title>
   <link rel="canonical" href="https://zhanghaifa.github.io/">
   <link rel="icon" href="./favicon.svg?v=0e0d23b613" type="image/svg+xml"><link rel="stylesheet" href="./styles.css?v=6c02d2198e">
-  <script src="./profile.js?v=30af9c5982" defer></script><script src="./content.js?v=e69e54a1ca" defer></script><script src="./site.js?v=a381dea8b9" defer></script>
+  <script src="./profile.js?v=30af9c5982" defer></script><script src="./content.js?v=4b37fc932e" defer></script><script src="./site.js?v=a381dea8b9" defer></script>
 </head>
 <body>
   <a data-content="ui.skip" class="skip-link" href="#main">Skip to content</a>
@@ -35,7 +35,54 @@
       </dl></section>
       <section id="publications" class="publications-section" aria-labelledby="publications-heading"><div class="section-heading"><h2 data-content="ui.papersTitle" id="publications-heading">Publications</h2><span data-content="ui.papersCount" class="section-note">6 papers, all first-author</span></div>
         <div class="publication-year"><span>2026</span></div>
-        <article class="publication" id="reinseg" aria-labelledby="paper-reinseg">
+        <article class="publication" id="degunet" aria-labelledby="paper-degunet">
+    <p class="publication-meta"><span class="venue accepted" data-content-title="ui.acceptedNote" title="Acceptance reported in the arXiv Comments field">ECCV 2026</span><span class="meta-sep" aria-hidden="true">·</span><time data-content="paper.degunet.date" datetime="2026-07">July 2026</time></p>
+    <h3 id="paper-degunet"><a href="https://arxiv.org/abs/2607.12419"><span data-content="paper.degunet.title">DeGuNet: Depth-Guided Ultra-Compact Backbones for Efficient LiDAR-Camera 3D Detection</span></a></h3>
+    <p class="authors"><strong>Haifa Zhang</strong>, Yijing Wang, Peixi Peng, Zhiqiang Zuo</p>
+    <p data-content="paper.degunet.takeaway" class="paper-takeaway">Use sparse depth to build a smaller image backbone for 3D perception.</p>
+    <figure class="paper-figure">
+      <a class="figure-link" href="./images/degunet-framework.png" data-figure="degunet" aria-label="Original Figure 1: RGB and projected LiDAR depth guide three image backbone stages, followed by LiteNeck, LSS, fusion and 3D detection." data-content-aria-label="paper.degunet.alt">
+        <img src="./images/degunet-framework.png" width="820" height="290" loading="lazy" decoding="async" alt="Original Figure 1: RGB and projected LiDAR depth guide three image backbone stages, followed by LiteNeck, LSS, fusion and 3D detection." data-content-alt="paper.degunet.alt">
+      </a>
+      <figcaption><span data-content="paper.degunet.caption">Figure 1. RGB images and sparse LiDAR projections guide successive feature stages before BEV transformation and fusion.</span> <a href="https://arxiv.org/html/2607.12419v1/sec_overall2.png" target="_blank" rel="noopener noreferrer"><span data-content="ui.originalFigure">Original figure</span></a></figcaption>
+    </figure>
+    <aside class="result-box" aria-label="Key result"><div class="result-metric"><strong data-content="paper.degunet.metric">20.46 → 6.86 GB</strong><span data-content="paper.degunet.metricLabel" class="metric-context">GPU memory · BEVFusion’23 · A100 / batch 1</span></div><div class="result-text"><p data-content="paper.degunet.resultHighlight" class="result-highlight">66.5% less GPU memory</p><p data-content="paper.degunet.resultCondition" class="result-condition">A100, batch 1, 256 × 704 images. Recommended inference configuration for each method.</p></div></aside>
+    <ul class="paper-keywords" aria-label="Research keywords"><li>3D object detection</li><li>Depth-guided learning</li><li>Efficient backbones</li></ul>
+    <div class="paper-links"><a href="https://arxiv.org/abs/2607.12419" aria-label="arXiv: DeGuNet: Depth-Guided Ultra-Compact Backbones for Efficient LiDAR-Camera 3D Detection">arXiv</a><a href="https://arxiv.org/pdf/2607.12419" aria-label="PDF: DeGuNet: Depth-Guided Ultra-Compact Backbones for Efficient LiDAR-Camera 3D Detection">PDF</a><details class="citation"><summary data-content="ui.citation">BibTeX</summary><pre><code>@misc{zhang2026degunet,
+  title = {{DeGuNet}: Depth-Guided Ultra-Compact Backbones for Efficient {LiDAR}-Camera 3D Detection},
+  author = {Haifa Zhang and Yijing Wang and Peixi Peng and Zhiqiang Zuo},
+  year = {2026},
+  eprint = {2607.12419},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CV},
+  note = {Accepted to ECCV 2026},
+  url = {https://arxiv.org/abs/2607.12419}
+}</code></pre></details><details class="paper-details"><summary><span data-content="ui.paperDetails">Method &amp; experimental details</span></summary><dl class="paper-explanation"><div><dt data-content="ui.problem">The problem</dt><dd data-content="paper.degunet.problem">Large image backbones pretrained on 2D tasks add overhead to 3D detection, while sparse LiDAR projections require careful handling of valid geometric cues.</dd></div><div><dt data-content="ui.method">The approach</dt><dd data-content="paper.degunet.method">DeGuNet combines depth-completion pretraining, mask-aware feature extraction, and progressive cross-modal guidance to learn compact image features aligned with 3D geometry.</dd></div><div><dt data-content="ui.result">Key result</dt><dd><span data-content="paper.degunet.result">For BEVFusion’23, the A100 efficiency test (batch size 1, 256 × 704 images) reports GPU memory dropping from 20.46 to 6.86 GB (−66.5%) and speed rising from 4.4 to 5.1 FPS. Methods use their recommended inference configurations.</span> <a href="https://arxiv.org/html/2607.12419v1#S5.T4" target="_blank" rel="noopener noreferrer"><span data-content="ui.evidence">Result source</span></a></dd></div></dl></details></div>
+  </article>
+<article class="publication" id="grace" aria-labelledby="paper-grace">
+    <p class="publication-meta"><span data-content="ui.preprint" class="venue">arXiv preprint</span><span class="meta-sep" aria-hidden="true">·</span><time data-content="paper.grace.date" datetime="2026-05">May 2026</time></p>
+    <h3 id="paper-grace"><a href="https://arxiv.org/abs/2605.30983"><span data-content="paper.grace.title">Can BEV Perception Gracefully Degrade under Sensor Failures?</span></a></h3>
+    <p class="authors"><strong>Haifa Zhang</strong>, Yijing Wang, Haoyu Wang, Zheng Li, Zhiqiang Zuo</p>
+    <p data-content="paper.grace.takeaway" class="paper-takeaway">Keep a visual fallback when LiDAR fails.</p>
+    <figure class="paper-figure">
+      <a class="figure-link" href="./images/grace-framework.png" data-figure="grace" aria-label="Original Figure 2: TrustGate controls LiDAR-guided and pure-vision branches, followed by FailSafe Fusion and a detection head." data-content-aria-label="paper.grace.alt">
+        <img src="./images/grace-framework.png" width="829" height="392" loading="lazy" decoding="async" alt="Original Figure 2: TrustGate controls LiDAR-guided and pure-vision branches, followed by FailSafe Fusion and a detection head." data-content-alt="paper.grace.alt">
+      </a>
+      <figcaption><span data-content="paper.grace.caption">Figure 2. TrustGate routes between depth-guided and vision-only branches; FailSafe Fusion combines their features for detection.</span> <a href="https://arxiv.org/html/2605.30983v1/fig_framework_overview.png" target="_blank" rel="noopener noreferrer"><span data-content="ui.originalFigure">Original figure</span></a></figcaption>
+    </figure>
+    <aside class="result-box" aria-label="Key result"><div class="result-metric"><strong data-content="paper.grace.metric">0.0 → 34.7</strong><span data-content="paper.grace.metricLabel" class="metric-context">mAP (%) · BEVFusion-AD · complete LiDAR dropout</span></div><div class="result-text"><p data-content="paper.grace.resultHighlight" class="result-highlight">A visual fallback under LiDAR failure</p><p data-content="paper.grace.resultCondition" class="result-condition">nuScenes-R with complete LiDAR dropout; cameras remain available.</p></div></aside>
+    <ul class="paper-keywords" aria-label="Research keywords"><li>BEV perception</li><li>Sensor failures</li><li>Reliability-aware fusion</li></ul>
+    <div class="paper-links"><a href="https://arxiv.org/abs/2605.30983" aria-label="arXiv: Can BEV Perception Gracefully Degrade under Sensor Failures?">arXiv</a><a href="https://arxiv.org/pdf/2605.30983" aria-label="PDF: Can BEV Perception Gracefully Degrade under Sensor Failures?">PDF</a><details class="citation"><summary data-content="ui.citation">BibTeX</summary><pre><code>@misc{zhang2026grace,
+  title = {Can {BEV} Perception Gracefully Degrade under Sensor Failures?},
+  author = {Haifa Zhang and Yijing Wang and Haoyu Wang and Zheng Li and Zhiqiang Zuo},
+  year = {2026},
+  eprint = {2605.30983},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CV},
+  url = {https://arxiv.org/abs/2605.30983}
+}</code></pre></details><details class="paper-details"><summary><span data-content="ui.paperDetails">Method &amp; experimental details</span></summary><dl class="paper-explanation"><div><dt data-content="ui.problem">The problem</dt><dd data-content="paper.grace.problem">Camera–LiDAR BEV detectors can collapse under LiDAR failure, even when cameras still provide usable information.</dd></div><div><dt data-content="ui.method">The approach</dt><dd data-content="paper.grace.method">Grace-BEV uses TrustGate to estimate LiDAR reliability and route between LiDAR-guided and vision-only BEV features. FailSafe Fusion and three-phase training with modality dropout help preserve the fallback.</dd></div><div><dt data-content="ui.result">Key result</dt><dd><span data-content="paper.grace.result">On nuScenes-R with complete LiDAR dropout, BEVFusion-AD with Grace-BEV reaches 34.7% mAP versus 0.0% for its baseline. On clean data, the same configuration improves mAP from 68.1% to 69.2%.</span> <a href="https://arxiv.org/html/2605.30983v1#S4.T1" target="_blank" rel="noopener noreferrer"><span data-content="ui.evidence">Result source</span></a></dd></div></dl></details></div>
+  </article>
+<article class="publication" id="reinseg" aria-labelledby="paper-reinseg">
     <p class="publication-meta"><span data-content="ui.preprint" class="venue">arXiv preprint</span><span class="meta-sep" aria-hidden="true">·</span><time data-content="paper.reinseg.date" datetime="2026-11">November 2026</time></p>
     <h3 id="paper-reinseg"><a href="https://arxiv.org/abs/2611.02648"><span data-content="paper.reinseg.title">ReinSeg: Retrieval-Guided Bounded Multimodal Refinement for 3-D Road Anomaly Segmentation</span></a></h3>
     <p class="authors"><strong>Haifa Zhang</strong>, Yijing Wang, Zhiqiang Zuo</p>
@@ -126,53 +173,6 @@
   primaryClass = {cs.CV},
   url = {https://arxiv.org/abs/2608.15261}
 }</code></pre></details><details class="paper-details"><summary><span data-content="ui.paperDetails">Method &amp; experimental details</span></summary><dl class="paper-explanation"><div><dt data-content="ui.problem">The problem</dt><dd data-content="paper.routing.problem">Optical and SAR images can conflict even when both appear intact. Treating every available modality as useful can introduce negative transfer into the detector.</dd></div><div><dt data-content="ui.method">The approach</dt><dd data-content="paper.routing.method">A Feature Router (FR) or Semantic Router (SR), chosen for the network architecture, adjusts contributions before the first feature mixing operation. The two are alternative implementations trained with detection supervision.</dd></div><div><dt data-content="ui.result">Key result</dt><dd><span data-content="paper.routing.result">On M4-SAR, adding FR to Simple U-Net raises full-input mAP50 from 58.2% to 64.1% (+5.9 percentage points). Both models use clean training and are evaluated with both modalities present.</span> <a href="https://arxiv.org/html/2608.15261v1#S4.T1" target="_blank" rel="noopener noreferrer"><span data-content="ui.evidence">Result source</span></a></dd></div></dl></details></div>
-  </article>
-<article class="publication" id="degunet" aria-labelledby="paper-degunet">
-    <p class="publication-meta"><span class="venue accepted" data-content-title="ui.acceptedNote" title="Acceptance reported in the arXiv Comments field">ECCV 2026</span><span class="meta-sep" aria-hidden="true">·</span><time data-content="paper.degunet.date" datetime="2026-07">July 2026</time></p>
-    <h3 id="paper-degunet"><a href="https://arxiv.org/abs/2607.12419"><span data-content="paper.degunet.title">DeGuNet: Depth-Guided Ultra-Compact Backbones for Efficient LiDAR-Camera 3D Detection</span></a></h3>
-    <p class="authors"><strong>Haifa Zhang</strong>, Yijing Wang, Peixi Peng, Zhiqiang Zuo</p>
-    <p data-content="paper.degunet.takeaway" class="paper-takeaway">Use sparse depth to build a smaller image backbone for 3D perception.</p>
-    <figure class="paper-figure">
-      <a class="figure-link" href="./images/degunet-framework.png" data-figure="degunet" aria-label="Original Figure 1: RGB and projected LiDAR depth guide three image backbone stages, followed by LiteNeck, LSS, fusion and 3D detection." data-content-aria-label="paper.degunet.alt">
-        <img src="./images/degunet-framework.png" width="820" height="290" loading="lazy" decoding="async" alt="Original Figure 1: RGB and projected LiDAR depth guide three image backbone stages, followed by LiteNeck, LSS, fusion and 3D detection." data-content-alt="paper.degunet.alt">
-      </a>
-      <figcaption><span data-content="paper.degunet.caption">Figure 1. RGB images and sparse LiDAR projections guide successive feature stages before BEV transformation and fusion.</span> <a href="https://arxiv.org/html/2607.12419v1/sec_overall2.png" target="_blank" rel="noopener noreferrer"><span data-content="ui.originalFigure">Original figure</span></a></figcaption>
-    </figure>
-    <aside class="result-box" aria-label="Key result"><div class="result-metric"><strong data-content="paper.degunet.metric">20.46 → 6.86 GB</strong><span data-content="paper.degunet.metricLabel" class="metric-context">GPU memory · BEVFusion’23 · A100 / batch 1</span></div><div class="result-text"><p data-content="paper.degunet.resultHighlight" class="result-highlight">66.5% less GPU memory</p><p data-content="paper.degunet.resultCondition" class="result-condition">A100, batch 1, 256 × 704 images. Recommended inference configuration for each method.</p></div></aside>
-    <ul class="paper-keywords" aria-label="Research keywords"><li>3D object detection</li><li>Depth-guided learning</li><li>Efficient backbones</li></ul>
-    <div class="paper-links"><a href="https://arxiv.org/abs/2607.12419" aria-label="arXiv: DeGuNet: Depth-Guided Ultra-Compact Backbones for Efficient LiDAR-Camera 3D Detection">arXiv</a><a href="https://arxiv.org/pdf/2607.12419" aria-label="PDF: DeGuNet: Depth-Guided Ultra-Compact Backbones for Efficient LiDAR-Camera 3D Detection">PDF</a><details class="citation"><summary data-content="ui.citation">BibTeX</summary><pre><code>@misc{zhang2026degunet,
-  title = {{DeGuNet}: Depth-Guided Ultra-Compact Backbones for Efficient {LiDAR}-Camera 3D Detection},
-  author = {Haifa Zhang and Yijing Wang and Peixi Peng and Zhiqiang Zuo},
-  year = {2026},
-  eprint = {2607.12419},
-  archivePrefix = {arXiv},
-  primaryClass = {cs.CV},
-  note = {Accepted to ECCV 2026},
-  url = {https://arxiv.org/abs/2607.12419}
-}</code></pre></details><details class="paper-details"><summary><span data-content="ui.paperDetails">Method &amp; experimental details</span></summary><dl class="paper-explanation"><div><dt data-content="ui.problem">The problem</dt><dd data-content="paper.degunet.problem">Large image backbones pretrained on 2D tasks add overhead to 3D detection, while sparse LiDAR projections require careful handling of valid geometric cues.</dd></div><div><dt data-content="ui.method">The approach</dt><dd data-content="paper.degunet.method">DeGuNet combines depth-completion pretraining, mask-aware feature extraction, and progressive cross-modal guidance to learn compact image features aligned with 3D geometry.</dd></div><div><dt data-content="ui.result">Key result</dt><dd><span data-content="paper.degunet.result">For BEVFusion’23, the A100 efficiency test (batch size 1, 256 × 704 images) reports GPU memory dropping from 20.46 to 6.86 GB (−66.5%) and speed rising from 4.4 to 5.1 FPS. Methods use their recommended inference configurations.</span> <a href="https://arxiv.org/html/2607.12419v1#S5.T4" target="_blank" rel="noopener noreferrer"><span data-content="ui.evidence">Result source</span></a></dd></div></dl></details></div>
-  </article>
-<article class="publication" id="grace" aria-labelledby="paper-grace">
-    <p class="publication-meta"><span data-content="ui.preprint" class="venue">arXiv preprint</span><span class="meta-sep" aria-hidden="true">·</span><time data-content="paper.grace.date" datetime="2026-05">May 2026</time></p>
-    <h3 id="paper-grace"><a href="https://arxiv.org/abs/2605.30983"><span data-content="paper.grace.title">Can BEV Perception Gracefully Degrade under Sensor Failures?</span></a></h3>
-    <p class="authors"><strong>Haifa Zhang</strong>, Yijing Wang, Haoyu Wang, Zheng Li, Zhiqiang Zuo</p>
-    <p data-content="paper.grace.takeaway" class="paper-takeaway">Keep a visual fallback when LiDAR fails.</p>
-    <figure class="paper-figure">
-      <a class="figure-link" href="./images/grace-framework.png" data-figure="grace" aria-label="Original Figure 2: TrustGate controls LiDAR-guided and pure-vision branches, followed by FailSafe Fusion and a detection head." data-content-aria-label="paper.grace.alt">
-        <img src="./images/grace-framework.png" width="829" height="392" loading="lazy" decoding="async" alt="Original Figure 2: TrustGate controls LiDAR-guided and pure-vision branches, followed by FailSafe Fusion and a detection head." data-content-alt="paper.grace.alt">
-      </a>
-      <figcaption><span data-content="paper.grace.caption">Figure 2. TrustGate routes between depth-guided and vision-only branches; FailSafe Fusion combines their features for detection.</span> <a href="https://arxiv.org/html/2605.30983v1/fig_framework_overview.png" target="_blank" rel="noopener noreferrer"><span data-content="ui.originalFigure">Original figure</span></a></figcaption>
-    </figure>
-    <aside class="result-box" aria-label="Key result"><div class="result-metric"><strong data-content="paper.grace.metric">0.0 → 34.7</strong><span data-content="paper.grace.metricLabel" class="metric-context">mAP (%) · BEVFusion-AD · complete LiDAR dropout</span></div><div class="result-text"><p data-content="paper.grace.resultHighlight" class="result-highlight">A visual fallback under LiDAR failure</p><p data-content="paper.grace.resultCondition" class="result-condition">nuScenes-R with complete LiDAR dropout; cameras remain available.</p></div></aside>
-    <ul class="paper-keywords" aria-label="Research keywords"><li>BEV perception</li><li>Sensor failures</li><li>Reliability-aware fusion</li></ul>
-    <div class="paper-links"><a href="https://arxiv.org/abs/2605.30983" aria-label="arXiv: Can BEV Perception Gracefully Degrade under Sensor Failures?">arXiv</a><a href="https://arxiv.org/pdf/2605.30983" aria-label="PDF: Can BEV Perception Gracefully Degrade under Sensor Failures?">PDF</a><details class="citation"><summary data-content="ui.citation">BibTeX</summary><pre><code>@misc{zhang2026grace,
-  title = {Can {BEV} Perception Gracefully Degrade under Sensor Failures?},
-  author = {Haifa Zhang and Yijing Wang and Haoyu Wang and Zheng Li and Zhiqiang Zuo},
-  year = {2026},
-  eprint = {2605.30983},
-  archivePrefix = {arXiv},
-  primaryClass = {cs.CV},
-  url = {https://arxiv.org/abs/2605.30983}
-}</code></pre></details><details class="paper-details"><summary><span data-content="ui.paperDetails">Method &amp; experimental details</span></summary><dl class="paper-explanation"><div><dt data-content="ui.problem">The problem</dt><dd data-content="paper.grace.problem">Camera–LiDAR BEV detectors can collapse under LiDAR failure, even when cameras still provide usable information.</dd></div><div><dt data-content="ui.method">The approach</dt><dd data-content="paper.grace.method">Grace-BEV uses TrustGate to estimate LiDAR reliability and route between LiDAR-guided and vision-only BEV features. FailSafe Fusion and three-phase training with modality dropout help preserve the fallback.</dd></div><div><dt data-content="ui.result">Key result</dt><dd><span data-content="paper.grace.result">On nuScenes-R with complete LiDAR dropout, BEVFusion-AD with Grace-BEV reaches 34.7% mAP versus 0.0% for its baseline. On clean data, the same configuration improves mAP from 68.1% to 69.2%.</span> <a href="https://arxiv.org/html/2605.30983v1#S4.T1" target="_blank" rel="noopener noreferrer"><span data-content="ui.evidence">Result source</span></a></dd></div></dl></details></div>
   </article>
       </section>
       <section id="contact" class="contact-section" aria-labelledby="contact-heading"><div class="section-heading"><h2 data-content="ui.contactTitle" id="contact-heading">Contact</h2></div><a class="contact-email" href="mailto:zhanghaifa@tju.edu.cn" data-link="email"><span data-content="profile.email">zhanghaifa@tju.edu.cn</span></a><p><span data-content="ui.contactNote">Email is the best way to reach me.</span></p><p class="contact-address"><span data-content="profile.school">School of Electrical and Information Engineering</span><br><span data-content="profile.university">Tianjin University</span>, <span data-content="profile.location">Tianjin, China</span></p></section>
