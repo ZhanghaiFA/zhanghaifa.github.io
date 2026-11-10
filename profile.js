@@ -7,7 +7,6 @@ window.HOMEPAGE_PROFILE = {
   "location": "Tianjin, China",
   "advisor1": "Prof. Yijing Wang",
   "advisor2": "Prof. Zhiqiang Zuo",
-  "photoCaption": "Chongqing, by the Nanjimen Bridge",
   "email": "zhanghaifa@tju.edu.cn",
   "githubUrl": "https://github.com/ZhanghaiFA",
   "bio": "I am a Ph.D. student in the School of Electrical and Information Engineering at Tianjin University, advised by Prof. Yijing Wang and Prof. Zhiqiang Zuo.",

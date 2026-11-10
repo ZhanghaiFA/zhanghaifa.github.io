@@ -34,7 +34,6 @@ nav a:hover { color: var(--accent); }
 .profile-rail { align-self: start; position: sticky; top: 5.75rem; font-family: var(--sans); }
 .portrait-frame { margin-bottom: 1.5rem; }
 .portrait { display: block; width: 100%; height: auto; border-radius: 3px; box-shadow: 0 1px 2px rgba(35,32,28,.08), 0 10px 28px -14px rgba(35,32,28,.35); }
-.portrait-frame figcaption { margin-top: .6rem; font-family: var(--serif); font-style: italic; font-size: .875rem; line-height: 1.5; color: var(--faint); }
 .role { font-size: .9375rem; font-weight: 600; color: var(--ink); line-height: 1.5; }
 .university { font-size: .9375rem; color: var(--ink); line-height: 1.5; }
 .school { font-size: .8438rem; color: var(--muted); line-height: 1.55; margin-top: .5rem; }
@@ -129,7 +128,6 @@ figcaption { font-family: var(--sans); color: var(--faint); font-size: .8125rem;
   .page-layout { grid-template-columns: minmax(0,1fr); gap: 2rem; margin-top: 2rem; padding: 0 1.5rem; }
   .profile-rail { position: static; display: flex; gap: 1.4rem; align-items: center; }
   .portrait-frame { flex: 0 0 auto; width: 124px; margin-bottom: 0; }
-  .portrait-frame figcaption { display: none; }
   .rail-info { min-width: 0; }
   .advisors { margin-top: .6rem; padding-top: .55rem; }
   .rail-label { display: inline; }
@@ -168,7 +166,7 @@ figcaption { font-family: var(--sans); color: var(--faint); font-size: .8125rem;
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
 @media print {
   body { font-size: 10pt; background: #fff; }
-  .site-header, .profile-links, .site-footer, #figure-dialog, .portrait-frame figcaption { display: none; }
+  .site-header, .profile-links, .site-footer, #figure-dialog { display: none; }
   .page-layout { display: block; margin: 0; padding: 0; }
   .profile-rail { position: static; float: right; width: 145px; margin: 0 0 1rem 2rem; }
   .research-section { clear: both; }

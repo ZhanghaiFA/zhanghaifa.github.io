@@ -4,7 +4,7 @@ English academic homepage: https://zhanghaifa.github.io/
 
 ## Update
 
-- Edit `profile.js` for the biography, advisors, photo caption, and contact information.
+- Edit `profile.js` for the biography, advisors, and contact information.
 - Edit `content.js` for publications, figure captions, and experimental results. Papers are listed newest first; each needs a `date` such as `November 2026`, and may set `primaryClass` (default `cs.CV`) and, when `accepted` is true, a `venue`.
 - Add a `researchN` / `researchNText` pair in `content.js` to add a row to the research interests list.
 - Edit `styles.css` for the visual design.
