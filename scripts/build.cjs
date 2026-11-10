@@ -81,7 +81,7 @@ const html = `<!doctype html>
       <figure class="portrait-frame"><img class="portrait" src="./portrait.jpg" alt="Portrait of Haifa Zhang" width="1280" height="1600" fetchpriority="high"></figure>
       <div class="rail-info">${tx('profile.role', 'p', 'class="role"')}${tx('profile.university', 'p', 'class="university"')}${tx('profile.school', 'p', 'class="school"')}${tx('profile.location', 'p', 'class="location"')}
       <p class="advisors">${tx('ui.advisorsLabel', 'span', 'class="rail-label"')}${tx('profile.advisor1', 'span', 'class="advisor"')}${tx('profile.advisor2', 'span', 'class="advisor"')}</p>
-      <div class="profile-links"><a href="mailto:${escape(profile.email)}" data-link="email">${tx('ui.email')}</a><a href="${escape(profile.githubUrl)}" data-link="github">GitHub</a></div></div>
+      <div class="profile-links">${tx('profile.email', 'a', `href="mailto:${escape(profile.email)}" data-link="email"`)}<a href="${escape(profile.githubUrl)}" data-link="github">GitHub</a></div></div>
     </aside>
     <main id="main">
       <section class="about" id="about" aria-labelledby="name-heading">
